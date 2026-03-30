@@ -39,11 +39,11 @@
 <feMergeNode in="displacedImage"/>
 </feMerge>
 </filter>
-<filter id="filter1_g_748_69" x="87.9834" y="473.721" width="63.3877" height="63.3879" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter1_g_748_69" x="89.9834" y="475.721" width="59.3877" height="59.3879" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feTurbulence type="fractalNoise" baseFrequency="0.99900001287460327 0.99900001287460327" numOctaves="3" seed="2059" />
-<feDisplacementMap in="shape" scale="8" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+<feDisplacementMap in="shape" scale="4" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
 <feMerge result="effect1_texture_748_69">
 <feMergeNode in="displacedImage"/>
 </feMerge>
@@ -63,7 +63,7 @@
 <feMergeNode in="displacedImage"/>
 </feMerge>
 </filter>
-<filter id="filter3_dg_748_69" x="689.339" y="370.858" width="37.6719" height="101.016" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter3_dg_748_69" x="689.339" y="372.858" width="37.6719" height="99.0164" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
@@ -73,7 +73,7 @@
 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_748_69"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_748_69" result="shape"/>
 <feTurbulence type="fractalNoise" baseFrequency="0.99900001287460327 0.99900001287460327" numOctaves="3" seed="8980" />
-<feDisplacementMap in="shape" scale="8" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+<feDisplacementMap in="shape" scale="4" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
 <feMerge result="effect2_texture_748_69">
 <feMergeNode in="displacedImage"/>
 </feMerge>
