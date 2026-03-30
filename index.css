@@ -92,6 +92,17 @@
             
             .button1{margin-top: 0px;}
 
+
+        /* .backtotop{
+            margin-top: 90vh;
+            margin-left: 90vw;
+            position: fixed;
+            z-index: 1;}
+
+        .img3{width:5vw;
+        min-width:40px;} */
+
+
         .logo{max-width:200px;
                 width:15vw;}
         .img1{max-width:800px;
@@ -220,8 +231,8 @@
             gap: 20px;
             margin-right:20px;
             border-left: 0.2vw solid transparent;}
-            
-        .content4border{display:flex;
+
+.content4border{display:flex;
             margin-left:5vw;
             width:90vw;
             padding-top: 20px;
@@ -294,21 +305,4 @@
                 background-color:#fafafa;
                 color:#3E3A39;
                 border: 1px solid #fafafa;}
-
-
-    
-
             
-            /* a:link{color: #3E3A39;
-                text-decoration:none;
-                cursor: crosshair;}
-
-            a:hover{color: #fafafa;
-                text-decoration:none;
-                cursor: crosshair;}
-
-            a:visited{color: #3E3A39;
-                text-decoration:none;
-                cursor: crosshair;} */
-                /* 這裡寫js */
-
