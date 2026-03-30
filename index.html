@@ -5,132 +5,477 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--for browser compatibility: choose rendering engine to view the page in an correct view (for old ver. IE)  -->
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>音符飞扬</title>   
+        <link rel="stylesheet" href="index.css">
         <!-- 字体 -->
         <link rel="stylesheet" href="https://font.sec.miui.com/font/css?family=MiSans:400,700">
 
-        <style>
-            /*滚动条宽度*/
-        ::-webkit-scrollbar{width: 0px;
-                            height: 5px;}
-            /*滚动条按钮样式*/
-        ::-webkit-scrollbar-thumb{border-radius: 10px;
-                                  background-color: #f1f1f1;}
-            /*滚动条背景样式*/
-        ::-webkit-scrollbar-track{border-radius: 10px;}
-
-        body{background-color: white;
-            font-family: MiSans VF, sans-serif;
-            font-style: normal;
-            font-color:#3E3A39;
-            width: 1920px;
-            align-items: center;
-            cursor:pointer;
-            overflow-x: hidden;}
-
-        h1{font-size:60;
-          line-height:90;}
-            
-        h2{font-size:48;
-          line-height:60;}
-
-        h3{font-size:30;
-          line-height:45;}
-            
-
-        .page1{margin-left:180px;
-              display:flex;}
-
-        .page1left{flex:0.8;}    
-        .page1right{flex:1.2;} 
-            
-        .blank1{height:30px;}
-        .blank2{height:180px;}
-        .logo{max-width:200px;}
-        .button{width: 240px;
-                height: 65px;
-                padding: 10px 60px;
-                align-items: center;
-                gap: 10px;
-                border-radius: 60px;
-                border: 2px solid #3E3A39;}
-
-    
-            
-            a:link{color: gray;
-                text-decoration:none;
-                cursor: crosshair;}
-
-            a:hover{color: black;
-                text-decoration:none;
-                cursor: crosshair;}
-
-            @media only screen and (max-width: 414px){
-              }
-
-          
-           
-        </style> 
 
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script language="javascript">
             $(document).ready(function(){
-                
-            $( ".about" ).hover(function() {
-                    $(".about").css('color','gray');
-                    $(".contact").css('color','black');
-                    $(".works").css('color','black');
-                }, function(){
-                    $(".about").css('color','black');
-                    $(".contact").css('color','black');
-                    $(".works").css('color','black');
-                });
 
-                $( ".about" ).click(function() {
-                    $(".about").css('color','black');
-                        $(".aboutinfo2").css("display","inline-block");  
-                        $(".contact2").css("display","inline-block"); 
-                        $(".works1").css("display","inline-block"); 
-                        $(".contact").css("display","none");  
-                        $(".works").css("display","none"); 
-                        $(".works2").css("display","none"); 
-                        $(".toggle").css("display","none");   
-                        $(".contactinfo").css('display','none');
-                });
-                
-        </script>
+            $( ".page0left" ).click(function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'});
+                    });
+            
+            $( ".button" ).click(function() {
+               const targetTop = $( ".target1" ).offset().top;
+               const headerHeight = $(".page0left").outerHeight();
+               window.scrollTo({
+                top: targetTop- headerHeight,
+                behavior: 'smooth'});
+            });
+
+            $( ".page0right1" ).click(function() {
+               const targetTop = $( ".target1" ).offset().top;
+               const headerHeight = $(".page0left").outerHeight();
+               window.scrollTo({
+                top: targetTop- headerHeight,
+                behavior: 'smooth'});
+            });
+
+            $( ".page0right2" ).click(function() {
+               const targetTop = $( ".target2" ).offset().top;
+               const headerHeight = $(".page0left").outerHeight();
+               window.scrollTo({
+                top: targetTop- headerHeight,
+                behavior: 'smooth'});
+            });
+
+            $( ".page0right3" ).click(function() {
+               const targetTop = $( ".target3" ).offset().top;
+               const headerHeight = $(".page0left").outerHeight();
+               window.scrollTo({
+                top: targetTop- headerHeight,
+                behavior: 'smooth'});
+            });
+
+            $( ".click0" ).click(function() {
+               const targetTop = $( ".target1" ).offset().top;
+               const headerHeight = $(".page0left").outerHeight();
+               window.scrollTo({
+                top: targetTop- headerHeight,
+                behavior: 'smooth'});
+            });
         
+            $( ".click1" ).click(function() {
+               const targetTop = $( ".target2" ).offset().top;
+               const headerHeight = $(".page0left").outerHeight();
+               window.scrollTo({
+                top: targetTop- headerHeight,
+                behavior: 'smooth'});
+            });
 
+            $( ".click2" ).click(function() {
+               const targetTop = $( ".target3" ).offset().top;
+               const headerHeight = $(".page0left").outerHeight();
+               window.scrollTo({
+                top: targetTop- headerHeight,
+                behavior: 'smooth'});
+            });
+
+            $( ".page0left" ).hover(function() {
+                $(".page0left").css('border-top','3px solid #3E3A39');
+                }, function(){
+                    $(".page0left").css('border-top','3px solid transparent');
+                });
+
+                //button 修改
+                
+                $( ".button" ).hover(function() {
+                $(".button").css('background-color','#3E3A39');
+                $(".button").css('color','#fafafa');
+                }, function(){
+                    $(".button").css('color','#3E3A39');
+                    $(".button").css('background-color','transparent');
+                });
+
+
+                $( ".page0right1" ).hover(function() {
+                $(".page0right1").css('border-top','3px solid #3E3A39');
+                }, function(){
+                    $(".page0right1").css('border-top','3px solid transparent');
+                });
+
+                $( ".page0right2" ).hover(function() {
+                $(".page0right2").css('border-top','3px solid #3E3A39');
+                }, function(){
+                    $(".page0right2").css('border-top','3px solid transparent');
+                });
+
+                $( ".page0right3" ).hover(function() {
+                $(".page0right3").css('border-top','3px solid #3E3A39');
+                }, function(){
+                    $(".page0right3").css('border-top','3px solid transparent');
+                });
+
+
+              // ==================== 滚动监听 (同步切换版) ====================
+
+// // 1. 定义图片数组 (确保文件名正确)
+// const productImages = ["01img.svg", "02img.svg", "03img.svg", "04img.svg"];
+
+// // 2. 配置监听器
+// const observerOptions = {
+//     root: null,
+//     threshold: 0.2 // 阈值，滚过触发切换
+// };
+
+// const scrollObserver = new IntersectionObserver((entries) => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//             const index = entry.target.getAttribute('data-step');
+            
+//             // 1. 更新文字高亮状态
+//             $('.scroll-text-item').removeClass('active');
+//             $(`.scroll-text-item[data-index="${index}"]`).addClass('active');
+            
+//             // 2. 切换图片 (带淡入淡出过渡)
+//             const $img = $('#dynamic-img');
+            
+//             // 先淡出
+//             $img.css('opacity', '0');
+            
+//             // 延时 300ms 后切换 src 并淡入，模拟平滑过渡
+//             setTimeout(() => {
+//                 $img.attr('src', productImages[index]);
+//                 $img.css('opacity', '1');
+//             }, 300);
+//         }
+//     });
+// }, observerOptions);
+
+// // 3. 开始监听所有触发区域
+// document.querySelectorAll('.scroll-trigger-zone').forEach(zone => {
+//     scrollObserver.observe(zone);
+// });
+
+
+            });
+        </script>
+
+    
     </head>
 
     <!-- 正文部分 -->
     <body>
-    <section class="page1">
-    <!-- 首页文字 -->   
-        <div class="page1left">
-        <div class="logo">
-             <!-- logo -->   
-        </div>
-            <div class="blank1"></div>
-        <h2>别让琐碎，掩盖了生活</h2>
-            <div class="blank2"></div>
-        <div class="button"><h3>了解更多</h3></div>
+
+         <!-- 首页导航 -->  
+             
+             <div class="page0left">
+              <img class="img7" src="logosmall.svg" alt="SVG Image">
+             </div>
+             
+             <div class="page0"><div class="page0right1">
+             <div class="button1"><p class="size6">产品</p></div>
+             </div>
+             <div class="page0right2">
+             <div class="button1"><p class="size6">关于</p></div>
+             </div>
+             <div class="page0right3">
+             <div class="button1"><p class="size6">联系</p></div>
+             </div>
+             <div class="page0right4">
+             <img class="img5" src="search.svg" alt="SVG Image">
+             
+             </div>
+
+             </div>
+
+            <!-- 返回箭头 --> 
+             <!-- <div class="backtotop"> -->
+             <!-- img -->    
+              <!-- <img class="img3" src="backtotop.svg" alt="SVG Image">
+              </div> -->
+            
+
+            <!-- 首页文字 -->  
+<div class="page1">
+     <div class="page1left">
+              <img class="logo" src="logolarge.svg" alt="SVG Image">
+            <!-- <div class="blank1"></div> -->
+        <p class="size4">别让琐碎，掩盖了生活</p>
+
+        <div class="button"><p class="size6">了解更多</p></div>
+
         </div>
         <div class="page1right">
              <!-- img -->    
+              <img class="img1" src="homepageimg.svg" alt="SVG Image">
+              </div>
+</div>
+           
+
+
+
+            <div class="line1"></div>
+            <div class="content0border">
+            <div class="content1">
+                <p class="size3">不只是记录，更是对生活的深度重构。</p>
+            </div>
+            </div>
+            <!-- texture -->    
+
+            <div class="line1"></div>
+              <img class="img0" src="star.svg" alt="SVG Image">
+                <img class="img00" src="star.svg" alt="SVG Image">
+             <!-- img -->  
+              
+            <div class="content2border">
+            <div class="content2">
+                <img class="img2" src="productintro.svg" alt="SVG Image">
+            </div>
+            </div>
+            
+            <div class="target1"></div>
+            <div class="line1"></div>
+              <img class="img0" src="star.svg" alt="SVG Image">
+                <img class="img00" src="star.svg" alt="SVG Image">
+            <div class="content1border">
+            <div class="content1">
+                <p class="size3">我们的产品</p>
+            </div>
+            </div>
+            <!-- texture -->    
+
+            <div class="line1"></div>
+              <img class="img0" src="star.svg" alt="SVG Image">
+                <img class="img00" src="star.svg" alt="SVG Image">
+            
+             <!-- 内容没改完3.27 -->   
+              
+            <div class="content3border">
+            <div class="content3">
+
+                <div class="content3left">
+
+
+            <div class="content3leftv1">
+                <div class="content3left0">
+                <span class="wrap"><p class="size5">01.</p> </span></div>
+
+                <div class="content3left1">
+                
+                <div class="highlight1">    
+                    <p class="size5">提取，而非操作 </p> 
+                    </div>
+                <div class="wrap4"><p class="size6">让技术来迁就你的直觉，没有繁琐的输入，只有即刻的理解。</p> </div>
+            </div>
+            </div>
+            
+            <div class="content3leftv2">
+                <div class="content3left0">
+                <span class="wrap"><p class="size5">02.</p> </span></div>
+
+                <div class="content3left1">
+                    <div class="highlight2">  
+                <p class="size5">从算法到助理 </p> 
+                </div>
+                <div class="wrap4"><p class="size6">从记录工具，进化为懂你的私人助理。</p> </div>
+            </div>
+            </div>
+
+            <div class="content3leftv3">
+                <div class="content3left0">
+                <span class="wrap"><p class="size5">03.</p> </span></div>
+
+                <div class="content3left1">
+                    <div class="highlight3">  
+                <p class="size5">规划源于理解 </p> 
+                </div>
+                <div class="wrap4"><p class="size6">帮助规划的不仅是任务，更是心流状态。</p> </div>
+            </div>
+            </div>
+
+            <div class="content3leftv4">
+                <div class="content3left0">
+                <span class="wrap"><p class="size5">04.</p> </span></div>
+
+                <div class="content3left1">
+                    <div class="highlight4">  
+                <p class="size5">为 AI 定制的载体 </p> 
+                </div>
+                <div class="wrap4"><p class="size6">让 AI 的反馈更纯粹，让你的声音成为唯一的入口。</p> </div>
+            </div>
+            </div>
+
+            </div>
+
+                <div class="content3right">
+                <img class="img4" src="04img.svg" alt="SVG Image">
+                </div>
+<!-- AI写的 -->
+<!-- <div class="product-scroll-container" id="scroll-trigger-container">
+    
+    <div class="product-sticky-view">
+        
+        <div class="text-list-wrapper">
+             <div class="blank"></div>
+            <div class="scroll-text-item active" data-index="0">
+                <div class="item-inner-content">
+                   
+                    <div class="item-number"><p class="size5">01.</p></div>
+                    <div class="item-text-block">
+                        <div class="highlight1"><p class="size5">提取，而非操作</p></div>
+                        <div class="wrap4"><p class="size6">让技术来迁就你的直觉，没有繁琐的输入，只有即刻的理解。</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-text-item" data-index="1">
+                <div class="item-inner-content">
+                    <div class="item-number"><p class="size5">02.</p></div>
+                    <div class="item-text-block">
+                        <div class="highlight1"><p class="size5">从算法到助理</p></div>
+                        <div class="wrap4"><p class="size6">从记录工具，进化为懂你的私人助理。</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-text-item" data-index="2">
+                <div class="item-inner-content">
+                    <div class="item-number"><p class="size5">03.</p></div>
+                    <div class="item-text-block">
+                        <div class="highlight1"><p class="size5">规划源于理解</p></div>
+                        <div class="wrap4"><p class="size6">帮助规划的不仅是任务，更是心流状态。</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-text-item" data-index="3">
+                <div class="item-inner-content">
+                    <div class="item-number"><p class="size5">04.</p></div>
+                    <div class="item-text-block">
+                        <div class="highlight1"><p class="size5">为 AI 定制的载体</p></div>
+                        <div class="wrap4"><p class="size6">让 AI 的反馈更纯粹，让你的声音成为唯一的入口。</p></div>
+                    </div>
+                </div>
+                
+            </div>
+<div class="blank"></div>
+        </div> <div class="image-display-wrapper">
+            <img class="img4-sticky" src="01img.svg" id="dynamic-img" alt="Product Image">
         </div>
-    </section>
-    <!-- 首页img -->    
+
+    </div> <div class="scroll-trigger-zone" data-step="0"></div>
+    <div class="scroll-trigger-zone" data-step="1"></div>
+    <div class="scroll-trigger-zone" data-step="2"></div>
+    <div class="scroll-trigger-zone" data-step="3"></div>
+</div> -->
+<!--  -->
+
+            </div>
+            </div>
+
+            <div class="target2"></div>
+            <div class="line1"></div>
+              <img class="img0" src="star.svg" alt="SVG Image">
+                <img class="img00" src="star.svg" alt="SVG Image">
+            <div class="content1border">
+            <div class="content1">
+
+                <p class="size3">关于我们</p>
+            </div>
+            </div>
+            <!-- texture -->    
+
+            <div class="line1"></div>
+              <img class="img0" src="star.svg" alt="SVG Image">
+                <img class="img00" src="star.svg" alt="SVG Image">
+                <div class="content4border">
+            <div class="content4">
+                <div class="content4left">
+                <p class="size6">生活已被信息过载打断。我们创造【产品名称】，只为回归纯粹的交互。</p>
+                <p class="size6">没有复杂屏幕与干扰，只有长效续航与懂你的 AI。 它能从你的言语中提取需求；平时，它是静默的陪伴，不占用你的视线；关键时，它是可靠的提醒，帮你找回生活的掌控感。</p>
+        
+            </div>
+            <div class="content4right">
+                </div>
+        </div>
+        </div>
+        
+
+        <div class="target3"></div>
+            <div class="line1"></div>
+              <img class="img0" src="star.svg" alt="SVG Image">
+                <img class="img00" src="star.svg" alt="SVG Image">
+            <div class="content1border">
+            <div class="content1">
+
+                <p class="size3">联系我们</p>
+            </div>
+            </div>
+            <!-- texture -->    
+
+            <div class="line1"></div>
+              <img class="img0" src="star.svg" alt="SVG Image">
+                <img class="img00" src="star.svg" alt="SVG Image">
+                <div class="content4border">
+            <div class="content4">
+                <div class="content4left">
+
+                <div class="content4left0">
+                <img class="img5" src="email.svg" alt="SVG Image">
+                <span class="wrap"><p class="size6">邮箱</p> </span>
+                <p class="size6">文本@gmail.com</p> 
+                </div>
+
+                <div class="content4left1">
+                <img class="img5" src="tel.svg" alt="SVG Image">
+                <span class="wrap"><p class="size6">电话</p></span>
+                <p class="size6">xxx-xxx-xxxx</p>
+                </div>
+
+                <div class="content4left2">
+                <div class="wrap0"><img class="img5" src="address.svg" alt="SVG Image"></div>
+                <span class="wrap"><p class="size6">地址</p></span>
+                <p class="size6">北京市西城区德胜门外大街13号院1号楼13层1305-2</p>
+                </div>
+
+            </div>
+            <div class="content4right">
+                </div>
+        </div>
+        </div>
 
 
+        <div class="content5border">
+            <div class="content5">
+                <p class="size3">订阅我们</p>
+                <div class="content5left0">
+                <img class="img5" src="email2.svg" alt="SVG Image">
+                <p class="size6">第一时间获得最新动态</p>
+                </div>
+        <div class="button2"><p class="size6">订阅</p></div>
+            </div>
+            </div>
+            <div class="line2"></div>
 
-  </section>
-</section>
+            <div class="content6border">
+                <div class="content6left">
+                <div class="content6left0">
+                <span class="wrap2"><p class="size6">产品</p> </span>
+                <div class="click0"><span class="wrap3"><p class="size5">产品</p> </span></div>
+                </div>
+                
+                <div class="content6left1">
+                <span class="wrap2"><p class="size6">信息</p></span>
+                <div class="click1"><span class="wrap3"><p class="size5">关于我们</p></span></div>
+                <div class="click2"><span class="wrap3"><p class="size5">联系我们</p></span></div>
+                </div>
+
+                <div class="content6right1">
+                    <img class="img6" src="logo.svg" alt="SVG Image">
+                </div>
+
+            </div>
+               <span class="wrap2"><p class="size7">Copyright © 2026 北京音符飞扬科技有限公司 版权所有</p></span>
 
 
     </body>
 </html>
 
 <!--<a name="link"></a>
-    <a href="#"></a>内置超链接
-1180width
-264height-->
+    <a href="#"></a>内置超链接-->
