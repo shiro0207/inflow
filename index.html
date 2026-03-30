@@ -112,47 +112,6 @@
                 });
 
 
-              // ==================== 滚动监听 (同步切换版) ====================
-
-// // 1. 定义图片数组 (确保文件名正确)
-// const productImages = ["01img.svg", "02img.svg", "03img.svg", "04img.svg"];
-
-// // 2. 配置监听器
-// const observerOptions = {
-//     root: null,
-//     threshold: 0.2 // 阈值，滚过触发切换
-// };
-
-// const scrollObserver = new IntersectionObserver((entries) => {
-//     entries.forEach(entry => {
-//         if (entry.isIntersecting) {
-//             const index = entry.target.getAttribute('data-step');
-            
-//             // 1. 更新文字高亮状态
-//             $('.scroll-text-item').removeClass('active');
-//             $(`.scroll-text-item[data-index="${index}"]`).addClass('active');
-            
-//             // 2. 切换图片 (带淡入淡出过渡)
-//             const $img = $('#dynamic-img');
-            
-//             // 先淡出
-//             $img.css('opacity', '0');
-            
-//             // 延时 300ms 后切换 src 并淡入，模拟平滑过渡
-//             setTimeout(() => {
-//                 $img.attr('src', productImages[index]);
-//                 $img.css('opacity', '1');
-//             }, 300);
-//         }
-//     });
-// }, observerOptions);
-
-// // 3. 开始监听所有触发区域
-// document.querySelectorAll('.scroll-trigger-zone').forEach(zone => {
-//     scrollObserver.observe(zone);
-// });
-
-
             });
         </script>
 
@@ -305,81 +264,7 @@
 
                 <div class="content3right">
                 <img class="img4" src="svg/04img.svg" alt="SVG Image">
-                </div>
-<!-- AI写的 -->
-<!-- <div class="product-scroll-container" id="scroll-trigger-container">
-    
-    <div class="product-sticky-view">
-        
-        <div class="text-list-wrapper">
-             <div class="blank"></div>
-            <div class="scroll-text-item active" data-index="0">
-                <div class="item-inner-content">
-                   
-                    <div class="item-number"><p class="size5">01.</p></div>
-                    <div class="item-text-block">
-                        <div class="highlight1"><p class="size5">提取，而非操作</p></div>
-                        <div class="wrap4"><p class="size6">让技术来迁就你的直觉，没有繁琐的输入，只有即刻的理解。</p></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="scroll-text-item" data-index="1">
-                <div class="item-inner-content">
-                    <div class="item-number"><p class="size5">02.</p></div>
-                    <div class="item-text-block">
-                        <div class="highlight1"><p class="size5">从算法到助理</p></div>
-                        <div class="wrap4"><p class="size6">从记录工具，进化为懂你的私人助理。</p></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="scroll-text-item" data-index="2">
-                <div class="item-inner-content">
-                    <div class="item-number"><p class="size5">03.</p></div>
-                    <div class="item-text-block">
-                        <div class="highlight1"><p class="size5">规划源于理解</p></div>
-                        <div class="wrap4"><p class="size6">帮助规划的不仅是任务，更是心流状态。</p></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="scroll-text-item" data-index="3">
-                <div class="item-inner-content">
-                    <div class="item-number"><p class="size5">04.</p></div>
-                    <div class="item-text-block">
-                        <div class="highlight1"><p class="size5">为 AI 定制的载体</p></div>
-                        <div class="wrap4"><p class="size6">让 AI 的反馈更纯粹，让你的声音成为唯一的入口。</p></div>
-                    </div>
-                </div>
-                
-            </div>
-<div class="blank"></div>
-        </div> <div class="image-display-wrapper">
-            <img class="img4-sticky" src="01img.svg" id="dynamic-img" alt="Product Image">
-        </div>
-
-    </div> <div class="scroll-trigger-zone" data-step="0"></div>
-    <div class="scroll-trigger-zone" data-step="1"></div>
-    <div class="scroll-trigger-zone" data-step="2"></div>
-    <div class="scroll-trigger-zone" data-step="3"></div>
-</div> -->
-<!--  -->
-
-            </div>
-            </div>
-
-            <div class="target2"></div>
-            <div class="line1"></div>
-              <img class="img0" src="svg/star.svg" alt="SVG Image">
-                <img class="img00" src="svg/star.svg" alt="SVG Image">
-            <div class="content1border">
-            <div class="content1">
-
-                <p class="size3">关于我们</p>
-            </div>
-            </div>
-            <!-- texture -->    
+                </div>  
 
             <div class="line1"></div>
               <img class="img0" src="svg/star.svg" alt="SVG Image">
