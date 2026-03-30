@@ -15,15 +15,9 @@
             align-items: center;
             cursor:pointer;
             overflow-x: hidden;
+            position:relative;
         margin:0px;}
 
-        /* .size1{font-size:60px;
-          line-height:90px;
-          font-weight: 330;}
-            
-        .size2{font-size:48px;
-          line-height:60px;
-          font-weight: 330;} */
 
         .size3{font-size:30px;
           line-height:45px;
@@ -119,7 +113,8 @@
         height:1px;
         background-color:#3e3a3966;}
 
-        .content1{margin-left:5vw;}
+        .content1{margin-left:5vw;
+        margin-right: 5vw;}
 
         .content0border{display:flex;
             margin-left:5vw;
@@ -152,7 +147,7 @@
             border-left:1px solid #3E3A3966;
         border-right:1px solid #3E3A3966;}
 
-        .img0{    margin-left: 4.1vw;
+        .img0{    margin-left: 4vw;
             display: block;
             width: 2vw;
             margin-top: -1vw;}
@@ -179,8 +174,6 @@
         .content3{flex:1;
             width: 80vw;
         display: flex;
-        overflow-y: scroll;
-        position: sticky;
         top: 0;
         overflow: hidden;
         gap: 10px;}
@@ -228,6 +221,8 @@
             margin-right:20px;
             border-left: 0.2vw solid transparent;}
             
+
+
         .content4border{display:flex;
             margin-left:5vw;
             margin-top:-1vw;
@@ -248,9 +243,7 @@
 
         .content4left0,.content4left1,.content4left2{display: flex;
             align-items: center;
-            /* white-space: nowrap; */
             word-break: break-all;
-            /* text-align-last: justify; */
             gap: 20px;}
 
         .content4left2{display: flex;
@@ -261,7 +254,8 @@
             .wrap2{color:#fafafa;opacity:0.6;}
             .wrap4{color:#3E3A3966;
             margin-top:-15px;}
-        
+            .wrap5{    display: none;}
+
         .content5border{padding-left: 5vw;
             color: #fafafa;
             margin-top:-1vw;
@@ -331,16 +325,27 @@
 
   }
 
+  @media only screen and (max-width: 510px){
+
+    .wrap5{display:block;
+            margin-top: -24px;}
+
+  }
+
    @media only screen and (max-width: 440px){
 
     .page1{display: inline-block;
-    width: 100vw;}
+    width: 90vw;}
 
     .page1right{margin-top: 50px;
     margin-left: 5vw;}
 
     .img1{width:80vw;}
+    .img0{margin-left: 4.1vw;}
+    .img4{width:60vw;}
     .content3{display: inline-block;}
+    .content3right{padding-top: 0px; 
+    padding-bottom: 50px;}
     .content4{display: inline-block;}
     .content6left{margin-bottom: 100px;}
 
