@@ -344,10 +344,14 @@
     .img0{margin-left: 4.1vw;}
     .img4{width:60vw;}
     .content3{display: inline-block;}
-    .content3right{padding-top: 0px; 
-    padding-bottom: 50px;}
+    .content3left{border-right:0px;
+    border-bottom: 1px solid #3E3A3966;}
+    .content3right{padding-top: 50px; 
+        padding-bottom: 50px;
+        border-left:0px;}
     .content4{display: inline-block;}
     .content6left{margin-bottom: 100px;}
+   }
 
 
-  }
+               
