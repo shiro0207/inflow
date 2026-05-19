@@ -77,10 +77,11 @@
             });
 
             $( ".page0left" ).hover(function() {
-                $(".page0left").css('border-top','3px solid #3E3A39');
+                $(".page0left").css('border-top','3px solid #0091ff');
                 }, function(){
                     $(".page0left").css('border-top','3px solid transparent');
                 });
+
 
                 //button 修改
                 
@@ -111,7 +112,86 @@
                     $(".page0right3").css('border-top','3px solid transparent');
                 });
 
-                  });
+                    const items = document.querySelectorAll('.color-item');
+        // 🛠️ 获取所有的图片元素
+        const allImages = document.querySelectorAll('.content3right img');
+
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                // 1. 切换按钮的 1px 激活圈状态
+                document.querySelector('.color-item.active').classList.remove('active');
+                item.classList.add('active');
+                
+                // 2. 🛠️ 核心联动逻辑：
+                // 第一步：先把所有图片的 display 全部强行设为 none
+                allImages.forEach(img => {
+                    img.style.display = 'none';
+                });
+
+                // 第二步：获取当前点击圆点指向的图片 ID
+                const targetImgId = item.getAttribute('data-img');
+                
+                // 第三步：把对应 ID 的图片显示状态改为 inline-block
+                document.getElementById(targetImgId).style.display = 'inline-block';
+            });
+        });
+
+
+        // 搜索部分5.18
+        const textarea = document.getElementById('auto-textarea');
+
+    textarea.addEventListener('input', function () {
+        // 先将高度重置为初始单行高度，以便在删字时高度能收缩回去
+        this.style.height = '22px'; 
+        
+        // scrollHeight 代表文字实际撑开的物理高度，将其赋予 textarea
+        this.style.height = this.scrollHeight + 'px'; 
+    });
+
+// 侧边栏关闭
+                $( ".backicon" ).click(function() {
+                $(".search").css('display','none');
+                });
+
+                $( ".searchleft" ).click(function() {
+                $(".search").css('display','none');
+                });
+
+// 侧边栏搜索
+                $( ".page0right4" ).click(function() {
+                $(".search").css('display','flex');
+                });
+
+                // animation 功能可运作，但没啥必要
+        //    (function() {
+        //         var l1 = document.getElementById('scene1-line1');
+        //         var l2 = document.getElementById('scene1-line2');
+        //         var l3 = document.getElementById('scene2-line1');
+
+        //         if (!l1 || !l2 || !l3) return;
+
+        //         // 1. 第一幕文字依次优雅浮现
+        //         setTimeout(function() { l1.classList.add('splash-fade-in'); }, 400);
+        //         setTimeout(function() { l2.classList.add('splash-fade-in'); }, 1200);
+
+        //         // 2. 第一幕文字整体向上淡出消失
+        //         setTimeout(function() {
+        //             l1.classList.add('splash-fade-out');
+        //             l2.classList.add('splash-fade-out');
+        //         }, 3200);
+
+        //         // 3. 4秒时：第二幕文字在绝对相同的顶部支点精准浮现
+        //         setTimeout(function() {
+        //             l1.style.display = 'none';
+        //             l2.style.display = 'none';
+        //             l3.classList.add('splash-fade-in');
+        //         }, 4000);
+
+        //         // 4. 第二幕文字淡出
+        //         setTimeout(function() { l3.classList.add('splash-fade-out'); }, 6300);
+        //     })();
+
+            });
         </script>
 
     
@@ -120,10 +200,29 @@
     <!-- 正文部分 -->
     <body>
 
+        <!-- 开屏动效 -->
+<!-- 
+            <div class="splash-screen">
+            <div class="splash-container">
+                <div class="splash-scene" id="splash-scene-1">
+                    <div class="splash-line" id="scene1-line1">被信息过载打断的生活，</div>
+                    <div class="splash-line" id="scene1-line2">需要一次<span class="brand-blue">减法</span>。</div>
+                </div>
+                
+                <div class="splash-scene" id="splash-scene-2">
+                    <div class="splash-line" id="scene2-line1">我们创造<span class="brand-blue">智言</span>，帮你找回专注与掌控。</div>
+                </div>
+            </div>
+        </div> -->
+
+
+
+
          <!-- 首页导航 -->  
-             
+             <!-- <div class="main-content" id="main-content"> -->
              <div class="page0left">
               <img class="img7" src="svg/logosmall.svg" alt="SVG Image">
+              <!-- <p class="size6">西安智言</p> -->
              </div>
              
              <div class="page0"><div class="page0right1">
@@ -135,36 +234,55 @@
              <div class="page0right3">
              <div class="button1"><p class="size6">联系</p></div>
              </div>
-             <div class="page0right4">
+
+
+             <!-- 5.19删除，暂无该功能 -->
+             <!-- <div class="page0right4">
              <img class="img5" src="svg/search.svg" alt="SVG Image">
              
-             </div>
+             </div> -->
 
              </div>
 
-         <!-- 首页文字 -->  
+
+            <!-- 返回箭头 --> 
+             <!-- <div class="backtotop"> -->
+             <!-- img -->    
+              <!-- <img class="img3" src="backtotop.svg" alt="SVG Image">
+              </div> -->
+            
+
+            <!-- 首页文字 -->  
 <div class="page1">
+
      <div class="page1left">
-              <img class="logo" src="svg/logolarge.svg" alt="SVG Image">
+              <p class="size2">西安智言</p>
+            <!-- <img class="logo" src="svg/logolarge.svg" alt="SVG Image"> -->
             <!-- <div class="blank1"></div> -->
-        <p class="size4">别让琐碎，掩盖了生活</p>
+        <p class="size4">Inspiration,  <b>听见灵感</b></p>
 
         <div class="button"><p class="size6">了解更多</p></div>
 
         </div>
         <div class="page1right">
              <!-- img -->    
-              <img class="img1" src="svg/homepageimg.svg" alt="SVG Image">
+              <img class="img1" src="svg/homepageimg2.svg" alt="SVG Image">
               </div>
+
+                  <!-- 动效 -->
+             <div class="container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
 </div>
            
-
 
 
             <div class="line1"></div>
             <div class="content0border">
             <div class="content1">
-                 <p class="size3">不只是记录，<span class="wrap5"><br></span>更是对生活的深度重构。</p>
+                <p class="size3">不只是记录，<span class="wrap5"><br></span>更是让生活回归从容的节奏</p>
             </div>
             </div>
             <!-- texture -->    
@@ -205,61 +323,196 @@
 
             <div class="content3leftv1">
                 <div class="content3left0">
-                <span class="wrap"><p class="size5">01.</p> </span></div>
+                <!-- <span class="wrap"><p class="size5">01.</p> </span>-->
+                <img class="img8" src="svg/add.svg" alt="SVG Image">
+            </div> 
 
                 <div class="content3left1">
                 
                 <div class="highlight1">    
-                    <p class="size5">提取，而非操作 </p> 
+                    <p class="size5">多款色系可选 </p> 
                     </div>
-                <div class="wrap4"><p class="size6">让技术来迁就你的直觉，没有繁琐的输入，只有即刻的理解。</p> </div>
+                    <div class="color-selector">
+        <div class="color-item active" data-img="img4">
+            <div class="color-dot color-1"></div>
+        </div>
+        
+        <div class="color-item" data-img="img42">
+            <div class="color-dot color-2"></div>
+        </div>
+        
+        <div class="color-item" data-img="img43">
+            <div class="color-dot color-3"></div>
+        </div>
+        
+        <div class="color-item" data-img="img44">
+            <div class="color-dot color-4"></div>
+        </div>
+
+        <div class="color-item" data-img="img45">
+            <div class="color-dot color-5"></div>
+        </div>
+    </div>
+
+                <!-- <div class="wrap4"><p class="size6">让技术来迁就你的直觉，没有繁琐的输入，只有即刻的理解。</p> </div> -->
             </div>
             </div>
             
             <div class="content3leftv2">
                 <div class="content3left0">
-                <span class="wrap"><p class="size5">02.</p> </span></div>
-
+                <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
                 <div class="content3left1">
                     <div class="highlight2">  
-                <p class="size5">从算法到助理 </p> 
+                <p class="size5">一体铝合金机身，坚固耐用，随身随行 </p> 
                 </div>
-                <div class="wrap4"><p class="size6">从记录工具，进化为懂你的私人助理。</p> </div>
             </div>
             </div>
 
-            <div class="content3leftv3">
+            <div class="content3leftv2">
                 <div class="content3left0">
-                <span class="wrap"><p class="size5">03.</p> </span></div>
-
+                <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
                 <div class="content3left1">
                     <div class="highlight3">  
-                <p class="size5">规划源于理解 </p> 
+                <p class="size5">2.8 寸纸感墨水屏，护眼便携，安静陪伴</p> 
                 </div>
-                <div class="wrap4"><p class="size6">帮助规划的不仅是任务，更是心流状态。</p> </div>
             </div>
             </div>
 
-            <div class="content3leftv4">
+            <div class="content3leftv2">
                 <div class="content3left0">
-                <span class="wrap"><p class="size5">04.</p> </span></div>
-
+                <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
                 <div class="content3left1">
                     <div class="highlight4">  
-                <p class="size5">为 AI 定制的载体 </p> 
+                <p class="size5">光栅滚轮交互，精准高效，单手可控</p> 
                 </div>
-                <div class="wrap4"><p class="size6">让 AI 的反馈更纯粹，让你的声音成为唯一的入口。</p> </div>
+            </div>
+            </div>
+
+            <div class="content3leftv2">
+                <div class="content3left0">
+                <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
+                <div class="content3left1">
+                    <div class="highlight4">  
+                <p class="size5">最长达<span class="brand-blue"> 60天 </span>单次充电续航时间</p> 
+                </div>
+            </div>
             </div>
             </div>
 
             </div>
 
                 <div class="content3right">
-                <img class="img4" src="svg/04img.svg" alt="SVG Image">
+                <img id="img4" src="svg/04img.svg" alt="SVG Image">
+                <img id="img42" src="svg/04img2.svg" alt="SVG Image">
+                <img id="img43" src="svg/04img3.svg" alt="SVG Image">
+                <img id="img44" src="svg/04img4.svg" alt="SVG Image">
+                <img id="img45" src="svg/04img5.svg" alt="SVG Image">
                 </div>
 
+            </div>
+            </div>
+
+            <!-- 详情页 -->
+             <div class="line3"></div>
+             <div class="content517border">
+             <div class="content517">
+                <div class="content517right">
+                     <div class="content3leftv1">
+                <div class="content3left0">
+                <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
+                <div class="content3left1">
+                    <div class="highlight4">  
+                <p class="size5">随时记录，智能整理</p> 
+                  <div class="wrap4"><p class="size6">开口即记，智能排程，留存每一个想法</p> </div>
                 </div>
             </div>
+            </div>
+                </div>
+
+                <div class="content517left">
+                    <img class="img10" src="svg/06img2.svg" alt="SVG Image">
+                   
+                </div>
+             </div>
+             </div>
+             
+
+            <!-- 第二部分 -->
+             <div class="line3"></div>
+             <div class="content517border">
+             <div class="content517">
+                <div class="content517left">
+                    <img class="img9" src="svg/04imgvertical.svg" alt="SVG Image">
+                </div>
+
+                <div class="content517right">
+                    <div class="content3leftv1">
+                <div class="content3left0">
+                <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
+                <div class="content3left1">
+                    <div class="highlight4">  
+                <p class="size5">支持横版屏幕与布局</p> 
+                 <div class="wrap4"><p class="size6">提供横屏 / 竖屏双模式选择，满足不同使用偏好</p> </div>
+                </div>
+            </div>
+            </div>
+                </div>
+             </div>
+             </div>
+
+
+             <!-- 第三部分 -->
+             <div class="line3"></div>
+             <div class="content517border">
+             <div class="content517">
+                <div class="content517right">
+                     <div class="content3leftv1">
+                <div class="content3left0">
+                <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
+                <div class="content3left1">
+                    <div class="highlight4">  
+                <p class="size5">多端同步，数据安心</p> 
+                  <div class="wrap4"><p class="size6">设备与手机 APP 双向同步，灵感、日程与记录多端无缝流转，随时查阅与编辑</p> </div>
+                </div>
+            </div>
+            </div>
+                </div>
+
+                <div class="content517left">
+                    <img class="img10" src="svg/05img.svg" alt="SVG Image">
+                   
+                </div>
+             </div>
+             </div>
+
+             <!-- 第四部分 -->
+             <div class="line3"></div>
+             <div class="content517border">
+             <div class="content517">
+                <div class="content517left">
+                    <img class="img10" src="svg/07img.svg" alt="SVG Image">
+                </div>
+
+                <div class="content517right">
+                    <div class="content3leftv1">
+                <div class="content3left0">
+                <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
+                <div class="content3left1">
+                    <div class="highlight4">  
+                <p class="size5">内置磁吸设计，多场景随心安放</p> 
+                 <div class="wrap4"><p class="size6">灵活磁吸形态，适配你的每一种生活节奏</p> </div>
+                </div>
+            </div>
+            </div>
+                </div>
+             </div>
+             </div>
+
+
+
+
+
+
 
             <div class="target2"></div>
             <div class="line1"></div>
@@ -279,8 +532,10 @@
                 <div class="content4border">
             <div class="content4">
                 <div class="content4left">
-                <p class="size6">生活已被信息过载打断。我们创造【产品名称】，只为回归纯粹的交互。</p>
-                <p class="size6">没有复杂屏幕与干扰，只有长效续航与懂你的 AI。 它能从你的言语中提取需求；平时，它是静默的陪伴，不占用你的视线；关键时，它是可靠的提醒，帮你找回生活的掌控感。</p>
+                <p class="size6">我们以「纯粹交互」为核心，为高活力人群打造安静、高效的智能陪伴设备。我们希望它成为专属 AI 接口—— 如同 MP3 专注于听歌一般，只在你需要时提供支撑，不做多余打扰。
+我们的愿景，是帮你告别快节奏与日程焦虑，重归从容有序的生活。
+                
+            </p>
         
             </div>
             <div class="content4right">
@@ -332,8 +587,8 @@
         </div>
         </div>
 
-
-        <div class="content5border">
+<!-- 5.19删除，暂无该功能 -->
+        <!-- <div class="content5border">
             <div class="content5">
                 <p class="size3">订阅我们</p>
                 <div class="content5left0">
@@ -343,29 +598,56 @@
         <div class="button2"><p class="size6">订阅</p></div>
             </div>
             </div>
-            <div class="line2"></div>
+            <div class="line2"></div> -->
 
             <div class="content6border">
                 <div class="content6left">
                 <div class="content6left0">
                 <span class="wrap2"><p class="size6">产品</p> </span>
-                <div class="click0"><span class="wrap3"><p class="size5">产品</p> </span></div>
+                <div class="click0"><span class="wrap3"><p class="size5">产品介绍</p> </span></div>
                 </div>
                 
                 <div class="content6left1">
-                <span class="wrap2"><p class="size6">信息</p></span>
+                <span class="wrap2"><p class="size6">关于</p></span>
                 <div class="click1"><span class="wrap3"><p class="size5">关于我们</p></span></div>
                 <div class="click2"><span class="wrap3"><p class="size5">联系我们</p></span></div>
+                <div class="blank-btm"></div>
                 </div>
 
-                <div class="content6right1">
+                <!-- <div class="content6right1">
                     <img class="img6" src="svg/logo.svg" alt="SVG Image">
-                </div>
+                </div> -->
 
             </div>
-               <span class="wrap2"><p class="size7">Copyright © 2026 北京音符飞扬科技有限公司 版权所有</p></span>
+               <span class="wrap2"><p class="size7">Copyright © 2026 西安智言人工智能科技有限公司 版权所有</p></span>
 
+</div>
 
+<div class="search">
+                <div class="searchleft">
+                </div>
+
+                <div class="searchright">
+                    <div class="serchrightv1">
+                    <div class="highlight4">  
+                        <!-- 这里有个关闭 -->
+
+                        <div class="backicon"><img class="img11" src="svg/back.svg" alt="SVG Image"></div>
+                         
+                <p class="size5"><textarea class="search-input" id="auto-textarea" placeholder="搜索..." rows="1" autofocus></textarea>
+</p> 
+
+                <p class="size5">热门搜索 →</p> 
+                <div class="line4"></div>
+                 <div class="wrap4"><p class="size6">暂不支持该功能</p> </div>
+            </div>
+            </div>
+                </div>
+             </div>
+             </div>
+             <!-- </div> -->
     </body>
 </html>
-                              
+
+<!--<a name="link"></a>
+    <a href="#"></a>内置超链接-->
