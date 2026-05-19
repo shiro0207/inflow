@@ -112,6 +112,7 @@
                     $(".page0right3").css('border-top','3px solid transparent');
                 });
 
+                // 颜色选择
                     const items = document.querySelectorAll('.color-item');
         // 🛠️ 获取所有的图片元素
         const allImages = document.querySelectorAll('.content3right img');
@@ -135,6 +136,9 @@
                 document.getElementById(targetImgId).style.display = 'inline-block';
             });
         });
+
+
+        
 
 
         // 搜索部分5.18
@@ -162,34 +166,7 @@
                 $(".search").css('display','flex');
                 });
 
-                // animation 功能可运作，但没啥必要
-        //    (function() {
-        //         var l1 = document.getElementById('scene1-line1');
-        //         var l2 = document.getElementById('scene1-line2');
-        //         var l3 = document.getElementById('scene2-line1');
-
-        //         if (!l1 || !l2 || !l3) return;
-
-        //         // 1. 第一幕文字依次优雅浮现
-        //         setTimeout(function() { l1.classList.add('splash-fade-in'); }, 400);
-        //         setTimeout(function() { l2.classList.add('splash-fade-in'); }, 1200);
-
-        //         // 2. 第一幕文字整体向上淡出消失
-        //         setTimeout(function() {
-        //             l1.classList.add('splash-fade-out');
-        //             l2.classList.add('splash-fade-out');
-        //         }, 3200);
-
-        //         // 3. 4秒时：第二幕文字在绝对相同的顶部支点精准浮现
-        //         setTimeout(function() {
-        //             l1.style.display = 'none';
-        //             l2.style.display = 'none';
-        //             l3.classList.add('splash-fade-in');
-        //         }, 4000);
-
-        //         // 4. 第二幕文字淡出
-        //         setTimeout(function() { l3.classList.add('splash-fade-out'); }, 6300);
-        //     })();
+           
 
             });
         </script>
@@ -199,21 +176,6 @@
 
     <!-- 正文部分 -->
     <body>
-
-        <!-- 开屏动效 -->
-<!-- 
-            <div class="splash-screen">
-            <div class="splash-container">
-                <div class="splash-scene" id="splash-scene-1">
-                    <div class="splash-line" id="scene1-line1">被信息过载打断的生活，</div>
-                    <div class="splash-line" id="scene1-line2">需要一次<span class="brand-blue">减法</span>。</div>
-                </div>
-                
-                <div class="splash-scene" id="splash-scene-2">
-                    <div class="splash-line" id="scene2-line1">我们创造<span class="brand-blue">智言</span>，帮你找回专注与掌控。</div>
-                </div>
-            </div>
-        </div> -->
 
 
 
@@ -357,7 +319,8 @@
                 <!-- <div class="wrap4"><p class="size6">让技术来迁就你的直觉，没有繁琐的输入，只有即刻的理解。</p> </div> -->
             </div>
             </div>
-            
+
+
             <div class="content3leftv2">
                 <div class="content3left0">
                 <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
@@ -409,6 +372,48 @@
                 <img id="img45" src="svg/04img5.svg" alt="SVG Image">
                 </div>
 
+                <!--手机端适配  -->
+
+                <div class="content3leftv3">
+                <div class="content3left0">
+                <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
+                <div class="content3left1">
+                    <div class="highlight2">  
+                <p class="size5">一体铝合金机身，坚固耐用，随身随行 </p> 
+                </div>
+            </div>
+            </div>
+
+            <div class="content3leftv3">
+                <div class="content3left0">
+                <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
+                <div class="content3left1">
+                    <div class="highlight3">  
+                <p class="size5">2.8 寸纸感墨水屏，护眼便携，安静陪伴</p> 
+                </div>
+            </div>
+            </div>
+
+            <div class="content3leftv3">
+                <div class="content3left0">
+                <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
+                <div class="content3left1">
+                    <div class="highlight4">  
+                <p class="size5">光栅滚轮交互，精准高效，单手可控</p> 
+                </div>
+            </div>
+            </div>
+
+            <div class="content3leftv3">
+                <div class="content3left0">
+                <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
+                <div class="content3left1">
+                    <div class="highlight4">  
+                <p class="size5">最长达<span class="brand-blue"> 60天 </span>单次充电续航时间</p> 
+                </div>
+            </div>
+            </div>
+
             </div>
             </div>
 
@@ -416,7 +421,7 @@
              <div class="line3"></div>
              <div class="content517border">
              <div class="content517">
-                <div class="content517right">
+                <div class="content517right1">
                      <div class="content3leftv1">
                 <div class="content3left0">
                 <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
@@ -447,7 +452,7 @@
 
                 <div class="content517right">
                     <div class="content3leftv1">
-                <div class="content3left0">
+                <div class="content517left0">
                 <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
                 <div class="content3left1">
                     <div class="highlight4">  
@@ -465,7 +470,7 @@
              <div class="line3"></div>
              <div class="content517border">
              <div class="content517">
-                <div class="content517right">
+                <div class="content517right1">
                      <div class="content3leftv1">
                 <div class="content3left0">
                 <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
@@ -495,7 +500,7 @@
 
                 <div class="content517right">
                     <div class="content3leftv1">
-                <div class="content3left0">
+                <div class="content517left0">
                 <img class="img8" src="svg/add.svg" alt="SVG Image"></div>
                 <div class="content3left1">
                     <div class="highlight4">  
