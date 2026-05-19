@@ -11,7 +11,7 @@
         body{background-color: white;
             font-family: MiSans VF, sans-serif;
             font-style: normal;
-            font-color:#3E3A39;
+            color:#3E3A39;
             align-items: center;
             cursor:pointer;
             overflow-x: hidden;
@@ -63,10 +63,11 @@
             clip-path: inset(0 0 0 0); 
         z-index:3;}
 
-        .container {position:fixed;
+        .container {position:absolute;
             filter: blur(80px); 
             opacity: 0.6;
             width:90vw;
+            z-index: 1;
         /* clip-path: inset(0 0 0 0);  */
 }
 
@@ -112,10 +113,12 @@
             100% { transform: translate(0, 0) scale(1); }
         }
             
-        .page1left{margin-left:5vw;
+        .page1left{position: relative;
+            margin-left:5vw;
          margin-top: -5vh;
         flex:1.0; z-index:10;}
-        .page1right{flex:1.0; z-index:10;}
+        .page1right{position: relative;
+            flex:1.0; z-index:10;}
 
         .page0{display:flex;
             flex-direction: row;
@@ -250,6 +253,7 @@
 
         .content3right img{width:25vw; object-fit: contain; display:none;}
         #img4{display: inline-block;}
+
      
         .img5{width:20px;}
 
@@ -289,6 +293,7 @@
         .content3border{display:flex;
             margin-left:5vw;
             margin-top:-0.6vw;
+            gap:10px;
             width:90vw;
             align-items:center;
             justify-content: center;
@@ -323,7 +328,17 @@
             flex: 0.8;
             flex-direction: column;
             justify-content: center;
-            margin-right:5vw;
+            margin-right:4.5vw;
+        border-left: 0px solid #3e3a3933;}
+
+        .content517right1
+        {display: flex;
+            /* gap: 10px; */
+            padding-top: 20px;
+            padding-bottom: 20px;
+            flex: 0.8;
+            flex-direction: column;
+            justify-content: center;
         border-left: 0px solid #3e3a3933;}
 
         
@@ -352,6 +367,12 @@
             margin-left: 4.5vw;
             word-break: break-all;}
 
+            .content517left0{display: flex;
+            align-items: flex-start;
+            margin-left: 0vw;
+            word-break: break-all;}
+
+
         .content3left1{word-break: break-all;}
 
         .content3leftv1{display: flex;
@@ -360,6 +381,12 @@
             margin-right:20px;}
 
         .content3leftv2{display: flex;
+            flex-direction: row;
+            gap: 20px;
+            margin-right:20px;
+            border-left: 0.2vw solid transparent;}
+
+        .content3leftv3{display: none;
             flex-direction: row;
             gap: 20px;
             margin-right:20px;
@@ -565,93 +592,7 @@
             word-break: break-all;}
 
 
-            /* 动画 */
-   /* ================= 2. 开屏动画绝对定位外壳 ================= */
-        /* .splash-screen {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100vw; height: 100vh;
-            background-color: #ffffff; /* 纯白遮罩面纱 */
-            z-index: 9999; /* 确保死死压在所有业务内容和弥散光最上层 */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            animation:splashScreenDismiss 0.8s cubic-bezier(0.25, 1, 0.5, 1) 7s forwards !important;} */
-
-        /* 第一幕 & 第二幕文字整体容器 */
-/* .splash-container {
-    text-align: center;
-    padding: 0 40px;
-    box-sizing: border-box;
-} */
-
-/* 核心文本基类：强制初始化透明、下沉，脱离普通 .line 的控制 */
-/* 
-.splash-line {
-    font-size:60px;
-          line-height:90px;
-          font-weight: 330;
-          color:#3E3A39
-    opacity: 0;
-    transform: translateY(14px);
-    display: none; /* 初始完全不占位 */
-} */
-
-
-/* 智言/减法 专用高亮高级洗练蓝 */
-/* .splash-screen .brand-blue {color: #0090FF;}
-
-.splash-scene {position:absolute;
-top:30vh;
-  left: 10vw;
-    right: 10vw;
-} */
-
-/* JS 控制：平滑非线性缓动浮现 */
-/* .splash-line.splash-fade-in {
-    display: block !important;
-    animation: splashCubicIn 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
-} */
-
-/* JS 控制：向上平滑淡出飘逝 */
-/* .splash-line.splash-fade-out {
-    animation: splashCubicOut 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
-} */
-
-/* 独立的阻尼缓动关键帧 */
-/* @keyframes splashCubicIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes splashCubicOut {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateY(-12px);
-    }
-} */
-
-/* 遮罩整体平滑淡出并销毁 */
-/* @keyframes splashScreenDismiss {
-    0% { opacity: 1; visibility: visible; }
-    99% { opacity: 0; visibility: hidden; }
-    100% { opacity: 0; visibility: hidden; display: none !important; }
-} */
-
-
-
-/* 底层网页主内容 */
-/* .main-content {
-    position: relative;
-    z-index: 10;
-} */
-
-
+       
 
             /* a:link{color: #3E3A39;
                 text-decoration:none;
@@ -680,45 +621,49 @@ top:30vh;
           line-height:27px;
           font-weight: 330;}
 
-        .size6{font-size:16px;
-          line-height:24px;
+        .size6{font-size:15px;
+          line-height:22.5px;
           font-weight: 330;}
 
         .size7{font-size:12px;
           line-height:18px;
           font-weight: 330;}
-
-
   }
 
   @media only screen and (max-width: 510px){
 
+    /* .size2{font-size:30px;
+          line-height:20px;
+          font-weight: 450;} */
+          
     .wrap5{display:block;
             margin-top: -24px;}
 
-  }
+    .page1{display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 90vw;}
 
-   @media only screen and (max-width: 440px){
+    .content3leftv3{display: flex;}
+    .content3leftv2{display: none;}
 
-    .page1{display: inline-block;
-    width: 90vw;}
+    .content3border{flex-direction: column;
+    align-items: flex-start;}
+
+    .content3right{display: flex;
+        justify-content: space-around;}
 
     .logo {width: 25vw;}
 
-    .page1right{margin-top: 50px;
+    .page1right{margin-top: 100px;
     margin-left: 5vw;}
 
     .img1{width:80vw;}
     .img0{margin-left: 4.1vw;}
     .img4{width:60vw;}
     .content3{display: inline-block;}
-    .content3left{border-right:0px;
-    border-bottom: 1px solid #3e3a3933;}
-    .content3right{padding-top: 50px; 
-        padding-bottom: 50px;
-        border-left:0px;}
+
     .content4{display: inline-block;}
     .content6left{margin-bottom: 100px;}
-
 
   }
