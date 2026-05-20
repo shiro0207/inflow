@@ -621,7 +621,7 @@
 
     .size3{font-size:24px;
           line-height:36px;
-          font-weight: 330;}
+          font-weight: 450;}
 
         .size4{font-size:20px;
           line-height:30px;
@@ -649,7 +649,7 @@
         
     .size3{font-size:20px;
           line-height:30px;
-          font-weight: 330;}
+          font-weight: 450;}
 
     .wrap5{display:block;
             margin-top: -24px;}
@@ -690,6 +690,8 @@
     .content517left0 {margin-left:4.5vw;}
     .content517leftp{display: grid;}
     .content517leftw{display: none;}
+
+    .content517right1 {margin-right: 4.5vw;}
 
 
     .logo {width: 25vw;}
