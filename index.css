@@ -268,7 +268,8 @@
         .img7{height:24px;}
 
         .img8{width: 30px;
-    margin-top: 18px;
+    margin-top: 19px;
+    opacity:0.4;
  transition: opacity 0.2s ease;}
 
     .img9{width:35vw;}
@@ -711,5 +712,8 @@
 
     .blank-btm2{display:flex;}
     .line3{width: calc(90vw + 2px);}
+
+    .img8{width: 24px;
+    margin-top: 20px;}
 
   }
