@@ -118,6 +118,7 @@
             margin-left:5vw;
          margin-top: -5vh;
         flex:1.0; z-index:10;}
+
         .page1right{position: relative;
             flex:1.0; z-index:10;}
 
@@ -132,13 +133,16 @@
             gap:20px;
             height: 60px;
             position:fixed;
+            top:0;
         z-index:1;}
 
         .page0left{
             padding-top: 15px;
             border-top: 3px solid transparent;
             margin-left:5vw;
+
             position:fixed;
+            top:0;
             z-index:2;
 
             display:flex;
@@ -468,6 +472,7 @@
         .content6right1{flex:1;}
 
 .blank-btm{height:100px;}
+.blank-btm2{height:50px;display:none;}
 
         .button2{display:flex;
             width: 90px;
@@ -640,6 +645,7 @@
 
   @media only screen and (max-width: 510px){
 
+    
     /* .size2{font-size:30px;
           line-height:20px;
           font-weight: 450;} */
@@ -653,8 +659,7 @@
 
     .page1{display: flex;
         align-items: stretch;
-        flex-direction: column;
-        width: 100vw;}
+        flex-direction: column;}
 
     .content3leftv3{display: flex;}
     .content3leftv2{display: none;}
@@ -700,9 +705,11 @@
     .img00{width:12px;margin-left:calc(95.1vw - 6px);margin-top:-12px;}
     .img4{width:60vw;}
     .img9{width:60vw;}
-    .img10{width:60vw;}
+    .img10{width:80vw;}
 
     .content4{display: inline-block;}
     .content6left{margin-bottom: 100px;}
+
+    .blank-btm2{display:flex;}
 
   }
