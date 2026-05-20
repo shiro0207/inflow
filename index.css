@@ -221,10 +221,8 @@
 
         .content1border{display:flex;
             margin-left:5vw;
-            margin-top:-1vw;
-            margin-bottom: -2vw;
+            margin-top:-0.6vw;
             width:90vw;
-            padding-bottom: 10px;
             align-items:center;
             border-left:1px solid #3e3a3933;
         border-right:1px solid #3e3a3933;}
@@ -658,6 +656,8 @@
     .page1{display: flex;
         align-items: stretch;
         flex-direction: column;}
+
+        .content1border{margin-top:-6px;}
 
     .content3leftv3{display: flex;}
     .content3leftv2{display: none;}
